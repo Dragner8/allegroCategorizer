@@ -15,8 +15,9 @@ countryId = 1
 filtr_query = client.factory.create('ArrayOfFilteroptionstype')
 
 
-tablica = { 'category': '67524',
+tablica = { 'category': '257933', #lustrz
             #'category': '253062', miliataria
+            # 486 komputery stacjonarne
            #'condition': 'used',
            'search': ''
            }
@@ -36,13 +37,19 @@ print "Otrzymano %d wynikow." % wynik.itemsCount, "Sukces! %s " % time.strftime(
 print wynik.itemsList[0][0].itemTitle
 list = wynik.itemsList[0]
 
-wyjscie = open("agd.txt", "w")
-
+wyjscie = open("komp", "w")
+i=0
 for x in list:
+    out= open("lustrz"+str(i), "w")
     w = x.itemTitle
     z=unidecode.unidecode(w)
     z=z+"\n"
-    wyjscie.write(z.lower())
+    out.write(z.lower())
+    out.close()
+    i=i+1
+    if(i==1000):
+        break
+
 
 
 
