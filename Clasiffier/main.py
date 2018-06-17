@@ -1,4 +1,4 @@
-import util
+
 import sklearn.datasets
 import sklearn.metrics
 import sklearn.cross_validation
