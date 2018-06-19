@@ -66,7 +66,8 @@ def train_test_classifier(X, y, clf, test_size, y_names):
     clf.fit(X_train, y_train)
     y_predicted = clf.predict(X_test)
 
-
+    print colored('Classification accuracy:', 'magenta', attrs=['bold'])
+    print sklearn.metrics.accuracy_score(y_test, y_predicted)
     print colored('Classification report:', 'magenta', attrs=['bold'])
     print sklearn.metrics.classification_report(y_test, y_predicted, target_names=y_names)
     print colored('Confusion Matrix:', 'magenta', attrs=['bold'])
