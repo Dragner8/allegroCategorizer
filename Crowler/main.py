@@ -11,7 +11,7 @@ url = 'https://webapi.allegro.pl/service.php?wsdl'
 client = Client(url)
 
 
-app = Flask(__name__)
+#app = Flask(__name__)
 
 # @app.route('/')
 # def output():
@@ -55,7 +55,7 @@ print "Otrzymano %d wynikow." % wynik.itemsCount, "Sukces! %s " % time.strftime(
 print wynik.itemsList[0][0].itemTitle
 list = wynik.itemsList[0]
 
-wyjscie = open("komp", "w")
+
 i=0
 for x in list:
     out= open("lustrz"+str(i), "w")

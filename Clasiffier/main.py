@@ -5,6 +5,7 @@ import sklearn.cross_validation
 import sklearn.svm
 import sklearn.naive_bayes
 import sklearn.neighbors
+import cPickle
 
 from termcolor import colored
 import sys
@@ -47,11 +48,15 @@ def main():
     print colored('Train and test clasiffier', 'magenta', attrs=['bold'])
     train_test_classifier(word_counts, files.target, clf, test_size=0.2, y_names=files.target_names)
 
-    newData=count_vector.transform(["bestia do gier","nikon nowy zielony","windows", "1060"])
+    newData=count_vector.transform(["bestia do gier","nikon nowy zielony","windows gtx nikon", "gtx komputer"])
     prediction= clf.predict(newData)
     print(prediction)
 
-
+    # save the classifier
+    with open('classifier.pkl', 'wb') as fid:
+        cPickle.dump(clf, fid)
+    with open('count_vector.pkl', 'wb') as fid:
+        cPickle.dump(count_vector, fid)
 
 def train_test_classifier(X, y, clf, test_size, y_names):
     # train-test split
