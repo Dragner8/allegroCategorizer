@@ -6,7 +6,7 @@
 
 <body>
     <nav class="navbar navbar-default">
-      <div class="container-fluid">
+      <div class="container">
         <div class="navbar-header">
           <div class="navbar-brand">Allegro Categorizer</div>
         </div>
@@ -15,14 +15,14 @@
 
     <div class="container">
         <h4>
-            Application gets url of an allegro web auction and check if it is well-categorized.
+            Paste url of an Allegro web auction and check if it is a computer.
         </h4>
-        <form class="form-signin" action = "http://localhost:5000/result" method = "POST">
+        <form class="form-signin" action = "http://localhost:5000/" method = "POST">
             <p><input class="form-control" type = "text"name="username" /></p>
             <p><input class="btn btn-lg btn-primary btn-block" type="submit" value="Check!" /></p>
         </form>
         <br/>
         <br/>
-        <h6>{{ result }}</h6>
+        <h3 style="text-align: center">{{ result }}</h3>
      </div>
 </body>
