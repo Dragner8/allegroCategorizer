@@ -3,27 +3,10 @@ from suds.client import Client
 import time
 
 import unidecode
-# from flask import Flask, render_template, request, redirect, Response
-# import random, json
 
-# Definiuje plik wejsciowz
 url = 'https://webapi.allegro.pl/service.php?wsdl'
 client = Client(url)
 
-
-#app = Flask(__name__)
-
-# @app.route('/')
-# def output():
-# 	return render_template('index.html')
-#
-# @app.route('/receiver', methods = ['POST'])
-# def worker():
-# 	data = request.get_json()
-# 	return render_template('index.html', message=data)
-#
-# if __name__ == '__main__':
-# 	app.run()
 
 
 
