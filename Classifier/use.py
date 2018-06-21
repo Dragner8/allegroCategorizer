@@ -44,7 +44,7 @@ def result():
         if svmResult == 1:
             message = 'This is a computer.'
         if svmResult == 0:
-            message = 'This is NOT a computer.s'
+            message = 'This is NOT a computer.'
         return render_template("index.html", result=message)
 
 
